@@ -1,0 +1,249 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.navbar div {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+/* Main Container */
+.container {
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.container h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  background: linear-gradient(to right, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Search Section */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.search-box input {
+  width: 420px;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  backdrop-filter: blur(15px);
+  font-size: 15px;
+}
+
+.search-box input::placeholder {
+  color: #cbd5e1;
+}
+
+.search-box button {
+  padding: 14px 24px;
+}
+
+/* Book Grid */
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Premium Book Card */
+.book-card {
+  width: 290px;
+  min-height: 520px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0px 15px 40px rgba(56,189,248,0.25);
+}
+
+.book-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.book-card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.book-card p {
+  color: #d1d5db;
+  margin: 12px 0;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #38bdf8, #7c3aed);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(124,58,237,0.4);
+}
+
+/* Detail Page */
+.detail-page {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 35px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  box-shadow: 0px 12px 40px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.detail-page img {
+  width: 320px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.detail-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.detail-page h3 {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.detail-page p {
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 25px;
+}
+
+/* Favorites Page */
+.status {
+  margin-top: 60px;
+  font-size: 24px;
+  color: #e2e8f0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#38bdf8, #7c3aed);
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-box input {
+    width: 90%;
+  }
+
+  .book-card {
+    width: 90%;
+  }
+
+  .detail-page img {
+    width: 220px;
+    height: 320px;
+  }
+
+  .container h1 {
+    font-size: 28px;
+  }
+}
